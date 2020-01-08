@@ -100,7 +100,7 @@ func (twilio *Twilio) SendSMSWithCopilot(messagingServiceSid, to, body, images, 
 	formValues := initFormValues(to, body, "", statusCallback, applicationSid)
 	formValues.Set("MessagingServiceSid", messagingServiceSid)
 
-	if images != nil {
+	if images != "" {
 		formValues.Set("MediaUrl", images)
 	}
 
